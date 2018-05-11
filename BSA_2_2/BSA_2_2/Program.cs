@@ -11,6 +11,25 @@ namespace BSA_2_2
 		static void Main(string[] args)
 		{
 			Console.WriteLine("Hello Binary Studio Academy 2018!");
+
+			Parking myPark = new Parking();
+
+			
+			Console.WriteLine();
+			myPark.AddCar();
+			Console.WriteLine();
+			myPark.AddCar();
+			Console.WriteLine();
+			myPark.AddCar();
+			Console.WriteLine();
+			myPark.AddCar();
+
+			//myPark.DisplayCars();
+
+			myPark.DeleteCar();
+
+			myPark.DisplayCars();
+
 			Console.ReadKey();
 		}
 	}

@@ -20,10 +20,10 @@ namespace BSA_2_2
 			timeOut = 3;
 
 			priceList = new Dictionary<int, string>();
-			priceList.Add(1, "motorcycle");
-			priceList.Add(2, "bus");
-			priceList.Add(3, "passenger car");
-			priceList.Add(5, "truck");			
+			priceList.Add(1, "Motorcycle");
+			priceList.Add(2, "Bus");
+			priceList.Add(3, "PassengerCar");
+			priceList.Add(4, "Truck");			
 
 			parkingSpace = 100;
 
