@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace BSA_2_2
 {
 	class Car
 	{
-		public enum EnumCarType { Motorcycle = 1, Bus = 2, PassengerCar = 3, Truck = 5}
+		public enum EnumCarType { Motorcycle = 1, Bus = 2, PassengerCar = 3, Truck = 4}
 
 		private Guid carID;
 		public readonly EnumCarType carType;
@@ -53,11 +53,10 @@ namespace BSA_2_2
 			set
 			{
 				if (value < 0)
-					Console.WriteLine("Error, you cann`t set balance<0");
+					Console.WriteLine("Error, you cann`t put less than 0");
 				else
 					balance = value; 
 			}
 		}
-
 	}
 }

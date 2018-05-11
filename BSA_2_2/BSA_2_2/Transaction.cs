@@ -8,7 +8,7 @@ namespace BSA_2_2
 {
 	class Transaction
 	{
-		private DateTime transactionStamp;
+		private DateTime transactionStamp ;
 		private Guid carID;
 		private double withdrawnMoney;
 
@@ -16,14 +16,29 @@ namespace BSA_2_2
 		{
 			transactionStamp = DateTime.Now;
 			carID = car.CarID;
-			withdrawnMoney = (int)car.carType + Settings.Fine * car.debt;
+			withdrawnMoney = (int)car.carType +  car.debt; // Settings.Fine *
 			car.Balance = car.Balance - withdrawnMoney;
 			car.debt = 0;			
 		}
 
 		public void DisplayTransactionInfo()
 		{
-			Console.WriteLine("{0}\t{1}\t{2}", transactionStamp, carID, withdrawnMoney);
+			Console.WriteLine("{0}\t{1}\t{2}", carID, transactionStamp,  withdrawnMoney);
+		}
+
+		public DateTime TransactionStamp
+		{
+			get { return transactionStamp; }
+		}
+
+		public double WithDrawMoney
+		{
+			get { return withdrawnMoney; }
+		}
+
+		public Guid CarID
+		{
+			get { return carID; }
 		}
 	}
 }
