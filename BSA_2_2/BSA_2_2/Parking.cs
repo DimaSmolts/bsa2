@@ -185,13 +185,8 @@ namespace BSA_2_2
 					"Balance",
 					"Debt");
 				Console.WriteLine();
-				for (int i = 0; i < parkingLot.Count; i++)
-				{
-					Console.Write("{0,3}\t", i);
-					parkingLot[i].DisplayCarInfo();
-					Console.WriteLine();
-				}
-
+				for (int i = 0; i < parkingLot.Count; i++)				
+					Console.WriteLine("{0,3}\t{1}", i, parkingLot[i].ToString());
 			}
 			else
 			{

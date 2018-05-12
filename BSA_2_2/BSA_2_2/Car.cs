@@ -37,12 +37,10 @@ namespace BSA_2_2
 			this.balance = balance;
 			debt = 0;	
 		}
-
-		public void DisplayCarInfo()
+		public override string ToString()
 		{
-			Console.Write("{0}\t{1,16}\t{2,8}\t{3,8}", carID, carType, balance, debt);			
+			return string.Format("{0}\t{1,16}\t{2,8}\t{3,8}", carID, carType, balance, debt);
 		}
-
 		public Guid CarID
 		{
 			get { return carID; }
