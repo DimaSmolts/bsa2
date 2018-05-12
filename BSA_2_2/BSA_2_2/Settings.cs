@@ -12,6 +12,7 @@ namespace BSA_2_2
 		private static Dictionary<int, string> priceList;
 		private static int parkingSpace;
 		private static double fine;
+		public static readonly string logFileName; 
 
 		static Settings()
 		{
@@ -28,6 +29,8 @@ namespace BSA_2_2
 			parkingSpace = 100;
 
 			fine = 2.5;
+
+			logFileName = "Transactions.log";
 		}
 
 		public static int TimeOut

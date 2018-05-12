@@ -242,7 +242,7 @@ namespace BSA_2_2
 
 			lock (locker)
 			{
-				FileStream file1 = new FileStream("Transactions.log", FileMode.Append);
+				FileStream file1 = new FileStream(Settings.logFileName, FileMode.Append);
 				StreamWriter sw = new StreamWriter(file1);
 
 				sw.WriteLine();
@@ -285,7 +285,7 @@ namespace BSA_2_2
 		{
 			lock (locker)
 			{
-				FileStream file1 = new FileStream("Transactions.log", FileMode.Open);
+				FileStream file1 = new FileStream(Settings.logFileName, FileMode.Open);
 				StreamReader sr = new StreamReader(file1);
 				Console.Write(sr.ReadToEnd());
 				sr.Close();
