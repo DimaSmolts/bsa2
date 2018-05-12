@@ -185,13 +185,8 @@ namespace BSA_2_2
 					"Balance",
 					"Debt");
 				Console.WriteLine();
-				for (int i = 0; i < parkingLot.Count; i++)
-				{
-					Console.Write("{0,3}\t", i);
-					parkingLot[i].DisplayCarInfo();
-					Console.WriteLine();
-				}
-
+				for (int i = 0; i < parkingLot.Count; i++)				
+					Console.WriteLine("{0,3}\t{1}", i, parkingLot[i].ToString());
 			}
 			else
 			{
@@ -247,7 +242,7 @@ namespace BSA_2_2
 
 			lock (locker)
 			{
-				FileStream file1 = new FileStream("Transactions.log", FileMode.Append);
+				FileStream file1 = new FileStream(Settings.logFileName, FileMode.Append);
 				StreamWriter sw = new StreamWriter(file1);
 
 				sw.WriteLine();
@@ -290,7 +285,7 @@ namespace BSA_2_2
 		{
 			lock (locker)
 			{
-				FileStream file1 = new FileStream("Transactions.log", FileMode.Open);
+				FileStream file1 = new FileStream(Settings.logFileName, FileMode.Open);
 				StreamReader sr = new StreamReader(file1);
 				Console.Write(sr.ReadToEnd());
 				sr.Close();
